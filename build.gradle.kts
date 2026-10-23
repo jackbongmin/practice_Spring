@@ -19,8 +19,9 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-webmvc")   // 이 프로젝트는 웹이다.를 알림 / 내장 Tomcat + Spring MVC
-    compileOnly("org.projectlombok:lombok")                                 // 보일러플레이트 코드 자동 생성(롬복)
+    implementation("org.springframework.boot:spring-boot-starter-webmvc")       // 이 프로젝트는 웹이다.를 알림 / 내장 Tomcat + Spring MVC
+    implementation("org.springframework.boot:spring-boot-starter-validation")   // @Valid, @NotBlank, @Email 추가
+    compileOnly("org.projectlombok:lombok")                                     // 보일러플레이트 코드 자동 생성(롬복)
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")  // 테스트 도구 모음
     testCompileOnly("org.projectlombok:lombok")
