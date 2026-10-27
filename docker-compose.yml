@@ -1,0 +1,17 @@
+services:
+  mariadb:
+    image: mariadb:11
+    container_name: practice-mariadb
+    ports:
+      - "3306:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: 1048
+      MARIADB_DATABASE: springboot
+      MARIADB_USER: practice
+      MARIADB_PASSWORD: practice1234
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+volumes:
+  mariadb-data:
